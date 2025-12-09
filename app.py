@@ -591,7 +591,7 @@ HTML_TEMPLATE = """
         }
         
         .confidence-fill {
-            width: 92%;
+            width: 80%;
             height: 100%;
             background: var(--gradient-success);
             border-radius: 5px;
@@ -601,7 +601,7 @@ HTML_TEMPLATE = """
         
         @keyframes fillBar {
             from { width: 0; }
-            to { width: 92%; }
+            to { width: 75%; }
         }
         
         .features-grid {
@@ -925,16 +925,13 @@ HTML_TEMPLATE = """
                         <i class="fas fa-tag fa-4x mb-4" style="color: var(--electric-blue); filter: drop-shadow(0 0 20px var(--electric-blue));"></i>
                         <h3 class="result-label glowing-text">ESTIMATED MARKET VALUE</h3>
                         <div class="price-display">{{ prediction_result }}</div>
-                        <p class="mt-4">
-                            <i class="fas fa-info-circle me-2" style="color: var(--racing-red);"></i>
-                            Based on current market trends and historical data
-                        </p>
+
                         <div class="confidence-meter">
                             <span style="color: var(--electric-blue);">ACCURACY CONFIDENCE:</span>
                             <div class="confidence-bar">
                                 <div class="confidence-fill"></div>
                             </div>
-                            <span style="color: var(--luxury-gold); font-weight: bold;">92%</span>
+                            <span style="color: var(--luxury-gold); font-weight: bold;">80%</span>
                         </div>
                     </div>
                     {% endif %}
